@@ -6,6 +6,14 @@
     3. If the sum of all the digits is a multiple of 10, then the number is valid; else it is not valid.
 
 """
+def verify_card_number(card_number):
+    sum_of_odd_numbers = 0
+    card_number_reversed = card_number[::-1]
+    odd_digits = card_number_reversed[::2]
+
+    for digit in odd_digits:
+        sum_of_odd_digit += digit
+        print(digit)
 
 def trans():
     """ the function aims to translate a card number by removing characters such as '-' and empy spaces from the provided card number"""
@@ -19,5 +27,3 @@ def trans():
 
 trans()
 
-def verify_card_number(card_number):
-    pass
