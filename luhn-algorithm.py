@@ -21,7 +21,12 @@ def verify_card_number(card_number):
 
     for even in even_digits:
         number = int(even) * 2
-        
+
+        if number >=10:
+            number = number // 10 + (number % 10)
+            print(number)
+
+
 
 def trans():
     """ the function aims to translate a card number by removing characters such as '-' and empy spaces from the provided card number"""
