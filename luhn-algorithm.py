@@ -25,9 +25,10 @@ def verify_card_number(card_number):
         if number >=10:
             number = number // 10 + (number % 10)
         sum_of_even_digits += number
-        
+
     total = sum_of_odd_digit + sum_of_even_digits
-    print(total)
+    
+    return total % 10 == 0
 
 
 
@@ -39,7 +40,10 @@ def trans():
     translated_card_number = card_number.translate(card_translation)
 
     print(translated_card_number)
-    verify_card_number(translated_card_number)
+    if verify_card_number(translated_card_number):
+        print('VALID!')
+    else: 
+        print('INVALID!')
 
 trans()
 
