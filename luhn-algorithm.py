@@ -7,13 +7,21 @@
 
 """
 def verify_card_number(card_number):
-    sum_of_odd_numbers = 0
+    sum_of_odd_digit = 0
     card_number_reversed = card_number[::-1]
     odd_digits = card_number_reversed[::2]
 
     for digit in odd_digits:
-        sum_of_odd_digit += digit
-        print(digit)
+    
+        sum_of_odd_digit += int(digit)
+   
+
+    sum_of_even_digits = 0
+    even_digits = card_number_reversed[1::2]
+
+    for even in even_digits:
+        number = int(even) * 2
+        
 
 def trans():
     """ the function aims to translate a card number by removing characters such as '-' and empy spaces from the provided card number"""
