@@ -24,7 +24,10 @@ def verify_card_number(card_number):
 
         if number >=10:
             number = number // 10 + (number % 10)
-            print(number)
+        sum_of_even_digits += number
+        
+    total = sum_of_odd_digit + sum_of_even_digits
+    print(total)
 
 
 
