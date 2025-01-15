@@ -20,4 +20,7 @@ print(my_list)
 #lets start building the expenses app 
 
 def add_expense(expenses, amount, category):
-    expenses.append()
+    expenses.append({'amount': amount , 'category': category})
+
+def print_expenses(expenses):
+    pass
