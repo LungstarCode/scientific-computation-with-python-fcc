@@ -22,11 +22,12 @@ print(my_list)  """
 def add_expense(expenses, amount, category):
     expenses.append({'amount': amount , 'category': category})
 
-def print_expenses(expense):
-    print(f"Amount: {expense['amount']}, Category: {expense['category']}")
+def print_expenses(expenses):
+    for expense in expenses:
+         print(f"Amount: {expense['amount']}, Category: {expense['category']}")
 
-def total_expenses(expenses):
-    return sum(map(lambda expense : expenses['amount'], expenses))
+def total_expenses(expense):
+    return sum(map(lambda expense : expense['amount'], expense))
 
 
 def filter_expenses_by_category(expenses, category):
@@ -64,6 +65,7 @@ def main():
 
         elif choice == '5':
             print('Exiting the program.')
+            break
             
 # lambda are simple unknownimous functions that are idea for one time jobs .. here is an example 
 
@@ -71,4 +73,6 @@ test = lambda x: x *2
 # to test it 
 #print(test(3))
 #print(test(4))
+
+main()
 
