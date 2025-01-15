@@ -42,6 +42,16 @@ def main():
         print('3. Show total expenses')
         print('4. Filter expenses by category')
         print('5. Exit')
+
+        choice = input('Enter your choice: ')
+        if choice == '1':
+            amount = float(input('Enter amount: '))
+            category = input('Enter category: ')
+            add_expense(expenses, amount, category)
+        elif choice == '2':
+            print('\nAll Expenses:')
+            print_expenses(expenses)
+            
 # lambda are simple unknownimous functions that are idea for one time jobs .. here is an example 
 
 test = lambda x: x *2 
