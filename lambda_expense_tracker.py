@@ -29,6 +29,9 @@ def total_expenses(expenses):
     return sum(map(lambda expense : expenses['amount'], expenses))
 
 
+def filter_expenses_by_category(expenses, category):
+    pass
+
 # lambda are simple unknownimous functions that are idea for one time jobs .. here is an example 
 
 test = lambda x: x *2 
