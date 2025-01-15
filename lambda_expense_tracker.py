@@ -1,5 +1,5 @@
 """This project using lambda functions in python to build an expenses tracker"""
-
+"""
 # first, we will ook at how lists work, for revision 
 my_list = [1, 2]
 
@@ -15,7 +15,7 @@ my_list.insert(1, 1)
 print(my_list)
 
 my_list.pop()
-print(my_list)
+print(my_list)  """
 
 #lets start building the expenses app 
 
@@ -26,4 +26,13 @@ def print_expenses(expense):
     print(f"Amount: {expense['amount']}, Category: {expense['category']}")
 
 def total_expenses(expenses):
-    pass
+    return sum(map(lambda expense : expenses['amount'], expenses))
+
+
+# lambda are simple unknownimous functions that are idea for one time jobs .. here is an example 
+
+test = lambda x: x *2 
+# to test it 
+#print(test(3))
+#print(test(4))
+
