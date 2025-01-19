@@ -22,3 +22,12 @@ def merge_sort(array):
         
     while left_array_index < len(left_part):
         array[sorted_index] = left_part[left_array_index]
+
+
+
+if __name__ == '__main__':
+    numbers = [4, 10, 6, 14, 2, 1, 8, 5]
+    print('Unsorted array: ')
+    print(numbers)
+    merge_sort(numbers)
+    print('Sorted array: '+ str(numbers))
